@@ -167,6 +167,9 @@ mapContainer.addEventListener('mouseleave', function () {
 // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
 var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
+// Disable zoom on double-tap to allow removing waypoints on double-tap
+behavior.disable(H.mapevents.Behavior.Feature.DBL_TAP_ZOOM);
+
 // Create the default UI components
 var ui = H.ui.UI.createDefault(map, defaultLayers);
 
@@ -176,7 +179,7 @@ var bubble;
 /**
  * @param  {H.geo.Point} position     The location on the map.
  * @param  {String} text              The contents of the infobubble.
- */
+ */ 
 function openBubble(position, text){
  if(!bubble){
     bubble =  new H.ui.InfoBubble(

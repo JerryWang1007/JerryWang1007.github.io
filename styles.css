@@ -338,7 +338,7 @@ body.night-mode::before {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    background-image: url('light_dark_switch.png');
+    background-image: url("https://raw.githubusercontent.com/JerryWang1007/JerryWang1007.github.io/main/light_dark_switch.png");
     -webkit-transition: .4s;
     border-radius: 1.5vh;
     transition: .4s;

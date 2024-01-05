@@ -1,3 +1,6 @@
+
+
+
 //BOILERPLATE CODE TO INITIALIZE THE MAP
 const platform = new H.service.Platform({
   'apikey': "kHI6W1H5g6eh-3Tz8Hl4RDMXtKSf_GZ5sA5VdTPRAf8"
@@ -9,7 +12,7 @@ const defaultLayers = platform.createDefaultLayers();
 // Instantiate (and display) a map:
 var map = new H.Map(
   document.getElementById("map"),
-  defaultLayers.vector.normal.map, {
+  defaultLayers.raster.normal.map, {
       zoom: 2,
       center: {
           lat: 0,
@@ -17,6 +20,9 @@ var map = new H.Map(
       },
       pixelRatio: window.devicePixelRatio || 1
   });
+
+
+
 
 function toggleNightMode() {
   var body = document.body;
@@ -31,14 +37,26 @@ function updateMapStyles() {
   console.log(nightModeCheckbox)
   if (nightModeCheckbox.checked) {
       // mapContainer.style.background = '#414a4c';
-      panelContainer.style.color = '#fff';
-      // map.setBaseLayer(defaultLayers.raster.normal.mapnight);
+      // panelContainer.style.color = '#fff';
+      map.setBaseLayer(defaultLayers.raster.normal.mapnight);
   } else {
       // mapContainer.style.background = 'grey';
-      panelContainer.style.color = ''; // Use your original text color
-      // map.setBaseLayer(defaultLayers.raster.normal.map);
+      // panelContainer.style.color = ''; // Use your original text color
+      map.setBaseLayer(defaultLayers.raster.normal.map);
+
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the panel element
+  var panel = document.getElementById('panel');
+  var placeHolderText = document.getElementById('placeHolderText');
+
+  // Set a temporary placeholder text if the panel is empty
+  if (panel.textContent.trim() === '') {
+    placeHolderText.textContent = 'Enter a Start and End Address to receive Directions';
+  }
+});
 
 // MapEvents enables the event system
 // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
@@ -86,6 +104,9 @@ function routeResponseHandler(response) {
           }
       });
   }
+
+  var placeHolderText = document.getElementById('placeHolderText');
+  placeHolderText.textContent = '';
 
   // Add the polyline to the map
   map.addObject(routePolyline);

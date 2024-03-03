@@ -1,7 +1,3 @@
-
-
-
-//BOILERPLATE CODE TO INITIALIZE THE MAP
 const platform = new H.service.Platform({
   'apikey': "kHI6W1H5g6eh-3Tz8Hl4RDMXtKSf_GZ5sA5VdTPRAf8"
 });
@@ -13,7 +9,7 @@ const defaultLayers = platform.createDefaultLayers();
 var map = new H.Map(
   document.getElementById("map"),
   defaultLayers.raster.normal.map, {
-      zoom: 2,
+      zoom: 3,
       center: {lat: 0, lng: 0},
       pixelRatio: window.devicePixelRatio || 1
   });
@@ -63,7 +59,7 @@ var ui = H.ui.UI.createDefault(map, defaultLayers, );
 let routePolyline;
 
 var updateBounds = true;
-/** Handler for the H.service.RoutingService8#calculateRoute call
+/** Handler for the H.service.RoutingService8
 * @param {object} response The response object returned by calculateRoute method */
 function routeResponseHandler(response) {
   const route = response.routes[0];
@@ -106,16 +102,6 @@ function routeResponseHandler(response) {
 
 var mapContainer = document.getElementById('map')
 var routeInstructionsContainer = document.getElementById('panel')
-
-mapContainer.addEventListener('mouseenter', function () {
-  // Zoom in when the mouse enters the map container
-  map.setZoom(map.getZoom() + 0.1, true, {onStart: function(){ behavior.disable(); }, onEnd: function(){ behavior.enable(); } });
-});
-
-mapContainer.addEventListener('mouseleave', function () {
-  map.setZoom(map.getZoom() - 0.1, true, {onStart: function(){ behavior.disable(); }, onEnd: function(){ behavior.enable(); } });
-});
-
 
 /** Returns an instance of H.map.Icon to style the markers
 * @param {number|string} id An identifier that will be displayed as marker label
@@ -420,27 +406,13 @@ function updateStats() {
 function addSummaryToPanel(route){
   var distancestat = document.getElementById("distance");
 
-  let duration = 0,
-      distance = 0;
+  let distance = 0;
 
   route.sections.forEach((section) => {
     distance += section.travelSummary.length;
-    // duration += section.travelSummary.duration;
   });
 
   distancestat.placeholder = distance + "m";
-
-  // var summaryDiv = document.createElement('div'),
-  //  content = '';
-  //  content += '<b>Total distance</b>: ' + distance  + 'm <br/>';
-  //  content += '<b>Travel Time</b>: ' + duration.toMMSS();
-
-
-  // summaryDiv.style.fontSize = 'small';
-  // summaryDiv.style.marginLeft ='5%';
-  // summaryDiv.style.marginRight ='5%';
-  // summaryDiv.innerHTML = content;
-  // routeInstructionsContainer.appendChild(summaryDiv);
 }
 
 /**

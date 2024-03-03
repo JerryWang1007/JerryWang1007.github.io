@@ -216,33 +216,6 @@
     }
 }
 
-
-
-svg {
-	font-family: 'Russo One', sans-serif;
-	position: absolute; 
-	width: 99%; height: 99%;
-}
-svg text {
-	text-transform: uppercase;
-	animation: stroke 5s infinite alternate;
-	stroke-width: 1;
-	stroke: #dda858;
-	font-size: 20px;
-}
-@keyframes stroke {
-	0%   {
-		fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
-		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;
-	}
-	70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
-	80%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); stroke-width: 1; }
-	100% {
-		fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0); 
-		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
-	}
-}
-
 :root {
   --day: url('https://raw.githubusercontent.com/JerryWang1007/JerryWang1007.github.io/56bc0eb93766b57778977965d77580aabbd782f8/WlwQrf1.png');
   --night: url("https://raw.githubusercontent.com/JerryWang1007/JerryWang1007.github.io/56bc0eb93766b57778977965d77580aabbd782f8/sHCeGME.png");
@@ -353,16 +326,18 @@ input:checked + .slider:before {
 
 #map {
     position: absolute;
-    bottom: 2%;
-    left: 25%;
-    width: 50vw;
-    height: 90vh;
+    /* bottom: 2%;
+    left: 25%; */
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
     background: grey;
     margin: 0 auto;
     transition: opacity 1s;
     opacity: 0;
     animation: fadeIn 3s ease-in forwards;
-    border-radius: 2.5%;
+    /* border-radius: 2.5%; */
     overflow: hidden;
 }
 

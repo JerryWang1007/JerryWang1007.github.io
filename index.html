@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <title>Map with Driving Route from A to B</title>
+    <title>Custom Route Generator</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
@@ -14,16 +14,6 @@
     <script>window.ENV_VARIABLE = 'developer.here.com'</script>
   <body id="markers-on-the-map">
 
-    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-    
-    <div class="page-header">
-        <svg viewBox = "0 0 200 300">
-          <text x="50%" y="3%" dy=".35em" text-anchor="middle">
-            Map Route from A to B
-          </text>
-        </svg>
-    </div>
-
     <div id="map"></div>
     <div id="directions">
       <h2>Directions:</h2>
@@ -31,7 +21,6 @@
       <h2 id="placeHolderText"></h2>
     </div>
 
-    
     <div id = "editor"> 
       <h2>Route Editor</h2>
 
@@ -52,7 +41,6 @@
           Generate
         </a>
       </form>
-      <!-- <button onclick="submitForm(event)"><span>Generate Route</span></button>     -->
     </div>
 
     <div id = "stats">

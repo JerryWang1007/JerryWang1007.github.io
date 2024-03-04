@@ -17,8 +17,7 @@
   position: absolute;
   top: 52.5%;
   left: 12.5%;
-  width: 350px;
-/*   width: 20vw; */
+  width: 19vw;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -31,8 +30,8 @@
   position: absolute;
   top: 25%;
   left: 87.5%;
-  width: 350px;
-/*   width: 20vw; */
+  width: 19vw;
+  height: 35vh;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -45,8 +44,8 @@
   position: absolute;
   top: 75%;
   left: 87.5%;
-  width: 350px;
-/*   width: 20vw; */
+  width: 19vw;
+  height: 32vh;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);

@@ -17,7 +17,7 @@
   position: absolute;
   top: 52.5%;
   left: 12.5%;
-  width: 21vw;
+  width: 30vw;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -30,7 +30,7 @@
   position: absolute;
   top: 25%;
   left: 87.5%;
-  width: 21vw;
+  width: 30%;
   height: 33vh;
   padding: 40px;
   transform: translate(-50%, -50%);
@@ -272,8 +272,8 @@ body.night-mode::before {
 .switch {
     position: relative;
     display: inline-block;
-    width: 3vw;
-    height: 3vh;
+    width: 3.1vw;
+    height: 2.2vh;
     left: 86vw;
     top: 2vh;
 }
@@ -299,8 +299,8 @@ body.night-mode::before {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 2vw;
+    width: 2vw;
     left: 4px;
     bottom: 4px;
     background-color: white;

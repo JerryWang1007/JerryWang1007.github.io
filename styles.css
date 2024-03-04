@@ -17,11 +17,11 @@
   position: absolute;
   top: 52.5%;
   left: 12.5%;
-  width: 19vw;
+  width: 21vw;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
-  height: 80vh;
+  height: 79vh;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
 }
@@ -30,8 +30,8 @@
   position: absolute;
   top: 25%;
   left: 87.5%;
-  width: 19vw;
-  height: 35vh;
+  width: 21vw;
+  height: 33vh;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -44,8 +44,8 @@
   position: absolute;
   top: 75%;
   left: 87.5%;
-  width: 19vw;
-  height: 32vh;
+  width: 21vw;
+  height: 30vh;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);

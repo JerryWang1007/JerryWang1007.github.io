@@ -1,5 +1,4 @@
- 
-::-webkit-scrollbar {
+ ::-webkit-scrollbar {
   width: 5px;
 }
   
@@ -375,6 +374,3 @@ input:checked + .slider:before {
 .directions li span.arrive  {
     background-position:-1288px;
 }
-
-
-

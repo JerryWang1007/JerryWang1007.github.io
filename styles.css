@@ -271,8 +271,8 @@ body.night-mode::before {
 .switch {
     position: relative;
     display: inline-block;
-    width: 3vw;
-    height: 3.1vh;
+    width: 57.6px;
+    height: 30px;
     left: 86vw;
     top: 2vh;
 }
@@ -298,8 +298,8 @@ body.night-mode::before {
 .slider:before {
     position: absolute;
     content: "";
-    height: 1.2vw;
-    width: 1.2vw;
+    height: 23px;
+    width: 23px;
     left: 6px;
     bottom: 3px;
     background-color: white;

@@ -382,18 +382,26 @@ function calculateSpeed(distance, time) {
 function updateStats() {
   document.getElementById('speed').addEventListener('input', function() {
   var speed = parseFloat(this.value);
-  var distance = parseFloat(document.getElementById('distance').placeholder);
+  if (speed > 0) {
+    var distance = parseFloat(document.getElementById('distance').placeholder);
 
-  var time = calculateTime(distance, speed);
-  document.getElementById('time').value = time.toFixed(2);
+    var time = calculateTime(distance, speed);
+    document.getElementById('time').value = time.toFixed(2);
+  } else {
+    document.getElementById('time').value = "NaN";
+  }
 });
 
   document.getElementById('time').addEventListener('input', function() {
     var time = parseFloat(this.value);
-    var distance = parseFloat(document.getElementById('distance').placeholder);
+    if (time > 0) {
+      var distance = parseFloat(document.getElementById('distance').placeholder);
 
-    var speed = calculateSpeed(distance, time);
-    document.getElementById('speed').value = speed.toFixed(2);
+      var speed = calculateSpeed(distance, time);
+      document.getElementById('speed').value = speed.toFixed(2);      
+    } else {
+      document.getElementById('speed').value = "NaN";
+    }
   });
 }
 

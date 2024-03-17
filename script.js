@@ -490,8 +490,3 @@ function addManueversToPanel(route){
 
   routeInstructionsContainer.appendChild(nodeOL);
 }
-
-
-Number.prototype.toMMSS = function () {
-  return  Math.floor(this / 60)  +' minutes '+ (this % 60)  + ' seconds.';
-}
